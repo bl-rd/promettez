@@ -14,7 +14,6 @@
   "main": "dist/promettez.cjs.js",
   "jsnext:main": "dist/promettez.es2015.js",
   "scripts": {
-    "postinstall": "npm run build",
     "build": "node index.js",
     "compile": "babel dist/promettez.js -o dist/promettez.js",
     "compile:min": "uglifyjs dist/promettez.js -m -o dist/promettez.min.js",
