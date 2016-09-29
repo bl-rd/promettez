@@ -1,0 +1,22 @@
+{
+  "name": "promettez",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/promettez.cjs.js",
+  "jsnext:main": "dist/promettez.es2015.js",
+  "scripts": {
+    "build": "node index.js",
+    "compile": "babel dist/promettez.js -o dist/promettez.js",
+    "compile:min": "uglifyjs dist/promettez.js -m -o dist/promettez.min.js",
+    "compile:cjs": "babel dist/promettez.cjs.js -o dist/promettez.cjs.js",
+    "compile:cjsmin": "uglifyjs dist/promettez.cjs.js -m -o dist/promettez.cjs.min.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "chalk": "^1.1.3",
+    "rollup": "^0.36.1",
+    "shelljs": "^0.7.4"
+  }
+}
