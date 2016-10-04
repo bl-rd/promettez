@@ -6,11 +6,11 @@ A promise based script loader. Heavily influenced by [Brad Berger's blog post](h
 ## Adding to the page
 
 ```html
-<script src="node_modules/promettez/promettez.js"></script>
+<script src="node_modules/promettez/dist/promettez.js"></script>
 
 <!-- or -->
 
-<script src="node_modules/promettez/promettez.min.js"></script>
+<script src="node_modules/promettez/dist/promettez.min.js"></script>
 ```
 
 This will add a global variable to the page to called `promettez`. This has a method called `addScript` which takes a string with a script url, or an array of url strings. This returns a promise, so we can run some code that depends on the script(s) after they have loaded:
@@ -42,7 +42,7 @@ promettez.addScript('/scripts/someAwesomeThing.js')
 
 ## Polyfill
 
-As this script uses [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), you will probably want to use a polyfill to load promise functionality if the broweser doesn't support it. I use [Polyfill.io](https://polyfill.io/v2/docs/), which does feature detection then adds polyfills if necessary.
+As this script uses [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), you will probably want to use a polyfill to load promise functionality if the browser doesn't support it. I use [Polyfill.io](https://polyfill.io/v2/docs/), which does feature detection then adds polyfills if necessary.
 
 ```html
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise&flags=gated"></script>
